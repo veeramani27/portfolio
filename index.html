@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veera Manikandan A | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-3px);
+            background-color: #e0e7ff;
+            color: #4338ca;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-lg border-b border-slate-200">
+        <div class="mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-2xl font-extrabold tracking-tight text-indigo-600 italic">Veera Manikandan A.</span>
+
+            <div class="hidden md:flex space-x-8 text-sm font-semibold">
+                <a href="#about" class="hover:text-indigo-600">About</a>
+                <a href="#skills" class="hover:text-indigo-600">Skills</a>
+                <a href="#projects" class="hover:text-indigo-600">Projects</a>
+                <a href="#certifications" class="hover:text-indigo-600">Certifications</a>
+                <a href="#education" class="hover:text-indigo-600">Education</a>
+                <a href="#contact" class="hover:text-indigo-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section id="about" class="pt-32 pb-20 px-6 mx-auto bg-indigo-50 border-b border-indigo-100">
+
+        <div class="max-w-4xl mx-auto text-center bg-white/60 backdrop-blur-sm 
+                    p-10 rounded-3xl shadow-sm border border-indigo-100">
+
+            <h2 class="text-indigo-600 font-bold tracking-widest text-sm uppercase mb-4">
+                Software Developer
+            </h2>
+
+            <h1 class="text-6xl font-semibold text-slate-900 mb-6 leading-tight">
+                Veera Manikandan A.
+            </h1>
+
+            <p class="text-slate-600 text-lg leading-relaxed mb-8 mx-auto max-w-2xl">
+                Computer Science student with strong programming fundamentals and hands-on experience in full-stack
+                development.
+                Passionate about solving real-world problems and contributing to impactful software solutions.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-10 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-indigo-500"></i> +91 9150287162
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-indigo-500"></i> veeramani27112004@gmail.com
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-indigo-500"></i> Chennai, India
+                </div>
+                <a href="https://leetcode.com/Veera_Manikandan_A" target="_blank"
+                    class="flex items-center gap-2 hover:text-indigo-600 transition">
+                    <i class="fas fa-code text-indigo-500"></i>
+                    LeetCode
+                </a>
+            </div>
+
+            <div class="mt-10 flex justify-center">
+                <a href="Resume Veera manikandan A.pdf" download class="inline-flex items-center gap-3 
+                          px-6 py-3 
+                          bg-indigo-600 text-white 
+                          font-semibold text-sm 
+                          rounded-full 
+                          shadow-md 
+                          hover:bg-indigo-700 
+                          hover:shadow-lg 
+                          transition-all duration-300">
+            
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 px-6 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                Technical Arsenal
+                <span class="h-1 w-24 bg-indigo-600 rounded"></span>
+            </h3>
+            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold mb-12">Project Works</h3>
+        <div id="projects-list" class="space-y-20"></div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-20 px-6 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                Certifications
+                <span class="h-1 w-24 bg-indigo-600 rounded"></span>
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:shadow-md transition">
+                    <p class="text-indigo-600 font-mono text-xs uppercase tracking-widest mb-2">Udemy</p>
+                    <h4 class="text-xl font-bold mb-2">FullStack Web Development</h4>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:shadow-md transition">
+                    <p class="text-indigo-600 font-mono text-xs uppercase tracking-widest mb-2">Udemy</p>
+                    <h4 class="text-xl font-bold mb-2">Java Programming Masterclass</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-20 px-6 bg-slate-100">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h3 class="text-2xl font-bold mb-8">Education</h3>
+                <h4 class="font-bold">B.E. Computer Science</h4>
+                <p class="text-indigo-600">Sri Venkateswara College of Engineering</p>
+                <p class="text-sm text-slate-500">2022 - PRESENT | CGPA: 8.77</p>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold mb-8">Internship</h3>
+                <div class="bg-white p-6 rounded-2xl border">
+                    <h4 class="font-bold">Arka Automaations Limited</h4>
+                    <p class="text-slate-600 text-sm">
+                        IoT systems & real-time integration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-6 bg-indigo-50 border-t border-indigo-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
+
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                    <i class="fas fa-envelope text-indigo-600 text-xl mb-3"></i>
+                    <p class="font-semibold">veeramani27112004@gmail.com</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                    <i class="fas fa-phone text-indigo-600 text-xl mb-3"></i>
+                    <p class="font-semibold">+91 9150287162</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                    <i class="fas fa-map-marker-alt text-indigo-600 text-xl mb-3"></i>
+                    <p class="font-semibold">Chennai, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Skills
+        const skillGroups = [
+                {
+                    name: "Programming Languages",
+                    icon: "fa-code",
+                    list: ["Java", "Python", "C/C++", "JavaScript"]
+                },
+                {
+                    name: "Backend Development",
+                    icon: "fa-server",
+                    list: ["FastAPI", "Spring Boot", "Node.js", "Express.js", "REST APIs", "JWT Authentication"]
+                },
+                {
+                    name: "Frontend Development",
+                    icon: "fa-laptop-code",
+                    list: ["React.js", "Angular", "HTML", "CSS", "Tailwind CSS"]
+                },
+                {
+                    name: "AI & Data",
+                    icon: "fa-brain",
+                    list: ["LangChain", "LangGraph", "ChromaDB", "Semantic Search", "PDF Parsing"]
+                },
+                {
+                    name: "Databases & Systems",
+                    icon: "fa-database",
+                    list: ["PostgreSQL", "MySQL", "Linux", "TCP Sockets"]
+                }
+            ];
+
+
+        const skillGrid = document.getElementById('skills-grid');
+        skillGroups.forEach(group => {
+            skillGrid.innerHTML += `
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-4 text-indigo-600">
+                        <i class="fas ${group.icon} text-xl"></i>
+                        <h4 class="font-bold">${group.name}</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        ${group.list.map(s =>
+                `<span class="skill-badge bg-slate-100 px-3 py-1 rounded-lg text-xs font-semibold uppercase">${s}</span>`
+            ).join('')}
+                    </div>
+                </div>
+            `;
+        });
+
+        // Projects (Dynamic List)
+        const projects = [
+                {
+                    name: "Next Gen AI Legal Assistant",
+                    tech: "FastAPI • LangChain • LangGraph • ChromaDB • React • PDF Parsing • Live Web Search",
+                    desc: "Built an AI-powered legal assistant for document analysis and precedent matching using live web search. Implemented PDF ingestion and semantic retrieval with ChromaDB, designed AI workflows using LangChain and LangGraph, and developed REST APIs with FastAPI alongside a responsive React frontend.",
+                    image: "legal_assistant.png"
+                },
+                {
+                    name: "TCP Chat Application",
+                    tech: "Node.js • Express.js • TCP Sockets • PostgreSQL • HTML • CSS",
+                    desc: "Developed a full-stack real-time 1-to-1 chat system using TCP sockets for low-latency communication. Integrated PostgreSQL for persistent chat storage and built backend APIs with Express.js, with a clean HTML/CSS frontend interface.",
+                    image: "tcp_image.png"
+                },
+                {
+                    name: "Movie Ticket Booking Website",
+                    tech: "FastAPI • PostgreSQL • React.js • JWT • Role-Based Access",
+                    desc: "Engineered a full-stack booking platform with JWT authentication and role-based access control. Implemented dynamic seat selection with a 7-minute locking mechanism and built scalable FastAPI backend services with a responsive React frontend.",
+                    image: "cinepass.png"
+                }
+            ];
+
+
+
+        const projectList = document.getElementById('projects-list');
+        projects.forEach(p => {
+            projectList.innerHTML += `
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- Project Image -->
+        <div class="aspect-video rounded-3xl border border-indigo-200 overflow-hidden shadow-inner group">
+            <img src="${p.image}" 
+                 alt="${p.name}" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        </div>
+
+        <!-- Project Content -->
+        <div>
+            <p class="text-indigo-600 font-mono text-xs mb-2 uppercase tracking-tighter">
+                ${p.tech}
+            </p>
+
+            <h4 class="text-3xl font-bold text-slate-900 mb-4">
+                ${p.name}
+            </h4>
+
+            <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                ${p.desc}
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+        });
+    </script>
+
+</body>
+
+</html>
