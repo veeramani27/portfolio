@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veera Manikandan A | Portfolio</title>
+    <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Load data first -->
+    <script src="data.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
@@ -24,6 +26,12 @@
             background-color: #e0e7ff;
             color: #4338ca;
         }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
     </style>
 </head>
 
@@ -32,14 +40,13 @@
     <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-lg border-b border-slate-200">
         <div class="mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-2xl font-extrabold tracking-tight text-indigo-600 italic">Veera Manikandan A.</span>
+            <span id="nav-name" class="text-2xl font-extrabold tracking-tight text-indigo-600 italic"></span>
 
             <div class="hidden md:flex space-x-8 text-sm font-semibold">
                 <a href="#about" class="hover:text-indigo-600">About</a>
                 <a href="#skills" class="hover:text-indigo-600">Skills</a>
+                <a href="#education" class="hover:text-indigo-600">Experience & Education</a>
                 <a href="#projects" class="hover:text-indigo-600">Projects</a>
-                <a href="#certifications" class="hover:text-indigo-600">Certifications</a>
-                <a href="#education" class="hover:text-indigo-600">Education</a>
                 <a href="#contact" class="hover:text-indigo-600">Contact</a>
             </div>
         </div>
@@ -47,68 +54,24 @@
 
     <!-- ABOUT -->
     <section id="about" class="pt-32 pb-20 px-6 mx-auto bg-indigo-50 border-b border-indigo-100">
+        <div class="max-w-4xl mx-auto text-center bg-white/60 backdrop-blur-sm p-10 rounded-3xl shadow-sm border border-indigo-100">
+            <h2 id="about-title" class="text-indigo-600 font-bold tracking-widest text-sm uppercase mb-4"></h2>
+            <h1 id="about-name" class="text-6xl font-semibold text-slate-900 mb-6 leading-tight"></h1>
+            <p id="about-summary" class="text-slate-600 text-lg leading-relaxed mb-8 mx-auto max-w-3xl"></p>
 
-        <div class="max-w-4xl mx-auto text-center bg-white/60 backdrop-blur-sm 
-                    p-10 rounded-3xl shadow-sm border border-indigo-100">
-
-            <h2 class="text-indigo-600 font-bold tracking-widest text-sm uppercase mb-4">
-                Software Developer
-            </h2>
-
-            <h1 class="text-6xl font-semibold text-slate-900 mb-6 leading-tight">
-                Veera Manikandan A.
-            </h1>
-
-            <p class="text-slate-600 text-lg leading-relaxed mb-8 mx-auto max-w-2xl">
-                Computer Science student with strong programming fundamentals and hands-on experience in full-stack
-                development.
-                Passionate about solving real-world problems and contributing to impactful software solutions.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-10 text-sm">
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-phone text-indigo-500"></i> +91 9150287162
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-envelope text-indigo-500"></i> veeramani27112004@gmail.com
-                </div>
-                <a href="https://www.linkedin.com/in/veeramani27" target="_blank"
-                    class="flex items-center gap-2 hover:text-indigo-600 transition">
-                    <i class="fab fa-linkedin text-indigo-500"></i>
-                    LinkedIn
-                </a>
-
-
-                <a href="https://leetcode.com/Veera_Manikandan_A" target="_blank"
-                    class="flex items-center gap-2 hover:text-indigo-600 transition">
-                    <i class="fas fa-code text-indigo-500"></i>
-                    LeetCode
-                </a>
-            </div>
+            <div id="contact-info-top" class="flex flex-wrap justify-center gap-6 text-sm"></div>
 
             <div class="mt-10 flex justify-center">
-                <a href="Resume Veera manikandan A.pdf" download class="inline-flex items-center gap-3 
-                          px-6 py-3 
-                          bg-indigo-600 text-white 
-                          font-semibold text-sm 
-                          rounded-full 
-                          shadow-md 
-                          hover:bg-indigo-700 
-                          hover:shadow-lg 
-                          transition-all duration-300">
-
+                <a id="resume-link" href="#" download class="inline-flex items-center gap-3 px-8 py-3 bg-indigo-600 text-white font-semibold text-sm rounded-full shadow-md hover:bg-indigo-700 hover:shadow-lg transition-all duration-300">
                     <i class="fas fa-download"></i>
                     Download Resume
                 </a>
             </div>
-
-
         </div>
     </section>
 
-
     <!-- SKILLS -->
-    <section id="skills" class="py-20 px-6 border-y border-slate-200">
+    <section id="skills" class="py-10 px-6 border-y border-slate-200">
         <div class="max-w-7xl mx-auto">
             <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
                 Technical Arsenal
@@ -117,245 +80,247 @@
             <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
         </div>
     </section>
+    <!-- EDUCATION, EXPERIENCE & ACHIEVEMENTS -->
+    <section id="education" class="py-20 px-6 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            
+            <!-- LEFT COLUMN: Education & Achievements -->
+            <div class="space-y-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-indigo-600"></i>
+                        Education
+                    </h3>
+                    <div id="education-list" class="space-y-6"></div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-award text-indigo-600"></i>
+                        Achievements & Impact
+                    </h3>
+                    <div id="achievements-list" class="space-y-4"></div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Experience -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fas fa-briefcase text-indigo-600"></i>
+                    Professional Experience
+                </h3>
+                <div id="experience-list" class="relative border-l-2 border-indigo-500 pl-8 space-y-12"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+    <section id="projects" class="py-10 px-6 max-w-7xl mx-auto">
         <div class="max-w-7xl mx-auto">
             <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
                 Project Works
                 <span class="h-1 w-24 bg-indigo-600 rounded"></span>
             </h3>
-            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
         </div>
-        <div id="projects-list" class="space-y-20"></div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="py-20 px-6 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
-                Certifications
-                <span class="h-1 w-24 bg-indigo-600 rounded"></span>
-            </h3>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:shadow-md transition">
-                    <p class="text-indigo-600 font-mono text-xs uppercase tracking-widest mb-2">Udemy</p>
-                    <h4 class="text-xl font-bold mb-2">FullStack Web Development</h4>
-                </div>
-
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:shadow-md transition">
-                    <p class="text-indigo-600 font-mono text-xs uppercase tracking-widest mb-2">Udemy</p>
-                    <h4 class="text-xl font-bold mb-2">Java Programming Masterclass</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION & EXPERIENCE -->
-    <section id="education" class="py-20 px-6 bg-slate-100">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-
-            <!-- LEFT SIDE - EDUCATION -->
-            <div>
-                <h3 class="text-2xl font-bold mb-8">Education</h3>
-
-                <div class="bg-white p-6 rounded-2xl border shadow-sm">
-                    <h4 class="font-bold text-lg">B.E. Computer Science</h4>
-                    <p class="text-indigo-600">Sri Venkateswara College of Engineering</p>
-                    <p class="text-sm text-slate-500">2022 - Present | CGPA: 8.68</p>
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE - PROFESSIONAL EXPERIENCE -->
-            <div>
-                <h3 class="text-2xl font-bold mb-8">Professional Experience</h3>
-
-                <div class="relative border-l-2 border-indigo-500 pl-6 space-y-10">
-
-                    <!-- Experience 1 -->
-                    <div class="relative">
-                        <div class="absolute -left-2 top-1 w-6 h-6 bg-indigo-500 rounded-full border-4 border-white">
-                        </div>
-                        <h4 class="font-bold text-lg pl-6">Intern - Arka Automaations Limited</h4>
-                        <p class="text-sm text-slate-500 mb-2">June 2024 - July 2024</p>
-                        <p class="text-slate-600 text-sm">
-                            Worked on IoT systems & real-time integration.
-                        </p>
-                    </div>
-
-                    <!-- Experience 2 -->
-                    <div class="relative">
-                        <div class="absolute -left-2 top-1 w-6 h-6 bg-indigo-500 rounded-full border-4 border-white">
-                        </div>
-                        <h4 class="font-bold text-lg pl-6">Trainee - Genworx AI</h4>
-                        <p class="text-sm text-slate-500 mb-2">Aug 2025 - Feb 2026</p>
-                        <p class="text-slate-600 text-sm">
-                            Worked as a trainee focusing on AI-driven solutions and real-world applications.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+        <div id="projects-list" class="space-y-32"></div>
     </section>
 
 
     <!-- CONTACT -->
-    <section id="contact" class="py-20 px-6 bg-indigo-50 border-t border-indigo-100">
+    <section id="contact" class="py-10 px-6 bg-indigo-50 border-t border-indigo-100">
         <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
-
-            <div class="grid md:grid-cols-3 gap-6 text-sm">
-                <div class="bg-white p-6 rounded-2xl border shadow-sm">
-                    <i class="fas fa-envelope text-indigo-600 text-xl mb-3"></i>
-                    <p class="font-semibold">veeramani27112004@gmail.com</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border shadow-sm">
-                    <i class="fas fa-phone text-indigo-600 text-xl mb-3"></i>
-                    <p class="font-semibold">+91 9150287162</p>
-                </div>
-                <a class="bg-white p-6 rounded-2xl border shadow-sm" href="https://www.linkedin.com/in/veeramani27" target="_blank">
-                    <i class="fab fa-linkedin text-indigo-600 text-xl mb-3"></i>
-                    <p class="font-semibold">Linked In</p>
-                </a>
-            </div>
+            <h3 class="text-3xl font-bold mb-10">Get In Touch</h3>
+            <div id="contact-links" class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm"></div>
         </div>
     </section>
 
-    <!-- JAVASCRIPT -->
+    <footer class="py-2 text-center text-slate-500 text-sm border-t border-slate-200">
+        <p id="footer-text"></p>
+    </footer>
+
     <script>
-        // Skills
-        const skillGroups = [
-            {
-                name: "Languages",
-                icon: "fa-code",
-                list: ["Java", "Python", "C/C++", "JavaScript", "SQL"]
-            },
-            {
-                name: "Backend Development",
-                icon: "fa-server",
-                list: ["FastAPI", "Spring Boot", "Node.js", "Express.js", "REST APIs", "JWT Authentication"]
-            },
-            {
-                name: "Frontend Development",
-                icon: "fa-laptop-code",
-                list: ["React.js", "Angular", "HTML", "CSS", "Tailwind CSS"]
-            },
-            {
-                name: "AI & Data",
-                icon: "fa-brain",
-                list: ["LangChain", "LangGraph", "Vectorization", "Semantic Search", "PDF Parsing"]
-            },
-            {
-                name: "Databases",
-                icon: "fa-database",
-                list: ["PostgreSQL", "MySQL", "Mongo DB", "Chroma DB"]
-            },
-            {
-                name: "Tools & Platforms",
-                icon: "fa-tools",
-                list: ["Git", "GitHub", "Docker", "Postman", "VS Code", "Linux","Google Cloud Platform (GCP)"]
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof portfolioData === 'undefined') {
+                console.error('portfolioData is not loaded. Ensure data.js is correctly linked.');
+                return;
             }
-        ];
 
+            // Update Title
+            document.title = `${portfolioData.name} | Portfolio`;
 
-        const skillGrid = document.getElementById('skills-grid');
-        skillGroups.forEach(group => {
-            skillGrid.innerHTML += `
-                <div class="p-6">
-                    <div class="flex items-center gap-3 mb-4 text-indigo-600">
-                        <i class="fas ${group.icon} text-xl"></i>
-                        <h4 class="font-bold">${group.name}</h4>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        ${group.list.map(s =>
-                `<span class="skill-badge bg-slate-100 px-3 py-1 rounded-lg text-xs font-semibold uppercase">${s}</span>`
-            ).join('')}
-                    </div>
-                </div>
-            `;
-        });
+            // Navbar
+            document.getElementById('nav-name').textContent = portfolioData.name + '.';
 
-        // Projects (Dynamic List)
-        const projects = [
-            {
-                name: "Next Gen AI Legal Assistant",
-                tech: "FastAPI • LangChain • LangGraph • ChromaDB • React • PDF Parsing • Live Web Search",
-                desc: "Built an AI-powered legal assistant for document analysis and precedent matching using live web search. Implemented PDF ingestion and semantic retrieval with ChromaDB, designed AI workflows using LangChain and LangGraph, and developed REST APIs with FastAPI alongside a responsive React frontend.",
-                image: "legal_assistant.png"
-            },
-            {
-                name: "TCP Chat Application",
-                tech: "Node.js • Express.js • TCP Sockets • PostgreSQL • HTML • CSS",
-                desc: "Developed a full-stack real-time 1-to-1 chat system using TCP sockets for low-latency communication. Integrated PostgreSQL for persistent chat storage and built backend APIs with Express.js, with a clean HTML/CSS frontend interface.",
-                image: "tcp_image.png"
-            },
-            {
-                name: "Movie Ticket Booking Website",
-                tech: "FastAPI • PostgreSQL • React.js • JWT • Role-Based Access",
-                desc: "Engineered a full-stack booking platform with JWT authentication and role-based access control. Implemented dynamic seat selection with a 7-minute locking mechanism and built scalable FastAPI backend services with a responsive React frontend.",
-                image: "cinepass.png"
-            },
-            {
-                name: "Automated Water Level Monitoring & Motor Control System",
-                tech: "ESP32 • Ultrasonic Sensor • Relay • MQTT • React • Node.js • Mobile Monitoring",
-                desc: "Built an IoT system to monitor tank water levels and automate motor control using an ESP32, ultrasonic sensor, and relay. Used MQTT for real-time data and a React frontend for mobile monitoring and manual override, enabling efficient water management with human oversight.",
-                image: "motor_control_system.png"
-            },
-            {
-                name: "Tech Endeavor - Technical Learning Journal",
-                tech: "React • React Router • JavaScript • Vercel • Tailwind CSS",
-                desc: "Designed and developed a personal technical journal to document my daily learning. Implemented client-side routing for seamless navigation and deployed on Vercel with production-ready configuration. The platform serves as a structured knowledge system to refine fundamentals, articulate complex ideas clearly, and demonstrate disciplined continuous learning in public.",
-                image: "tech_endeavor.png",
-                link: "https://tech-endeavor.vercel.app/"
-            }
-        ];
+            // About Section
+            document.getElementById('about-title').textContent = portfolioData.title;
+            document.getElementById('about-name').textContent = portfolioData.name + '.';
+            document.getElementById('about-summary').textContent = portfolioData.summary;
+            document.getElementById('resume-link').href = portfolioData.contact.resume;
 
-
-
-        const projectList = document.getElementById('projects-list');
-        projects.forEach(p => {
-            const linkHtml = p.link ? `
-                <a href="${p.link}" target="_blank" class="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-700 transition">
-                    View Project <i class="fas fa-external-link-alt text-xs"></i>
+            const topContact = document.getElementById('contact-info-top');
+            topContact.innerHTML = `
+                <div class="flex items-center gap-2"><i class="fas fa-phone text-indigo-500"></i> ${portfolioData.contact.phone}</div>
+                <div class="flex items-center gap-2"><i class="fas fa-envelope text-indigo-500"></i> ${portfolioData.contact.email}</div>
+                <a href="${portfolioData.contact.linkedin}" target="_blank" class="flex items-center gap-2 hover:text-indigo-600 transition">
+                    <i class="fab fa-linkedin text-indigo-500"></i> LinkedIn
                 </a>
-            ` : '';
+                <a href="${portfolioData.contact.github}" target="_blank" class="flex items-center gap-2 hover:text-indigo-600 transition">
+                    <i class="fab fa-github text-indigo-500"></i> GitHub
+                </a>
+                <a href="${portfolioData.contact.leetcode}" target="_blank" class="flex items-center gap-2 hover:text-indigo-600 transition">
+                    <i class="fas fa-code text-indigo-500"></i> LeetCode
+                </a>
+            `;
 
-            projectList.innerHTML += `
-    <div class="grid md:grid-cols-2 gap-10 items-center">
+            // Skills Section
+            const skillGrid = document.getElementById('skills-grid');
+            const skillIcons = {
+                "Languages": "fa-code",
+                "Backend Development": "fa-server",
+                "Frontend Development": "fa-laptop-code",
+                "AI & Data": "fa-brain",
+                "Databases": "fa-database",
+                "Tools & Platforms": "fa-tools"
+            };
 
-        <!-- Project Image -->
-        <div class="aspect-video rounded-3xl border border-indigo-200 overflow-hidden shadow-inner group">
-            <img src="${p.image}" 
-                 alt="${p.name}" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-        </div>
+            Object.entries(portfolioData.skills).forEach(([group, list]) => {
+                skillGrid.innerHTML += `
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4 text-indigo-600">
+                            <i class="fas ${skillIcons[group] || 'fa-star'} text-xl"></i>
+                            <h4 class="font-bold">${group}</h4>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            ${list.map(s => `<span class="skill-badge bg-white shadow-sm border border-slate-100 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider">${s}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            });
 
-        <!-- Project Content -->
-        <div>
-            <p class="text-indigo-600 font-mono text-xs mb-2 uppercase tracking-tighter">
-                ${p.tech}
-            </p>
+            // Projects Section
+            const projectList = document.getElementById('projects-list');
+            portfolioData.projects.forEach(p => {
+                const linkHtml = p.link ? `
+                    <a href="${p.link}" target="_blank" class="mt-6 inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-700 transition">
+                        View Live Project <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                ` : '';
 
-            <h4 class="text-3xl font-bold text-slate-900 mb-4">
-                ${p.name}
-            </h4>
+                const metricsHtml = p.metrics ? `
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        ${Object.entries(p.metrics).map(([key, val]) => `
+                            <div class="bg-indigo-50 border border-indigo-100 px-3 py-1 rounded-full">
+                                <span class="text-[10px] font-bold text-indigo-600 uppercase tracking-tighter">${key.replace(/_/g, ' ')}:</span>
+                                <span class="text-[10px] font-extrabold text-indigo-800 uppercase tracking-tighter">${val}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '';
 
-            <p class="text-slate-600 text-lg leading-relaxed mb-6">
-                ${p.desc}
-            </p>
+                projectList.innerHTML += `
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div class="aspect-video rounded-3xl border border-indigo-200 overflow-hidden shadow-xl group relative bg-slate-200 lg:sticky lg:top-24">
+                            <!-- Blurred Backdrop -->
+                            <img src="${p.image}" class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110" aria-hidden="true">
+                            <!-- Main Image -->
+                            <img src="${p.image}" alt="${p.name}" class="relative w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${p.tech_stack.map(tech => `<span class="text-[10px] font-bold text-indigo-500 bg-indigo-50 px-2 py-0.5 rounded uppercase">${tech}</span>`).join('')}
+                            </div>
+                            <h4 class="text-3xl font-bold text-slate-900 mb-4">${p.name}</h4>
+                            <p class="text-slate-600 text-lg leading-relaxed mb-6 font-medium italic border-l-4 border-indigo-200 pl-4">${p.description}</p>
+                            
+                            <ul class="space-y-3 mb-6">
+                                ${p.bullets.map(bullet => `
+                                    <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+                                        <i class="fas fa-check-circle text-indigo-500 mt-1 text-xs"></i>
+                                        <span>${bullet}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
 
-            ${linkHtml}
-        </div>
+                            ${metricsHtml}
+                            ${linkHtml}
+                        </div>
+                    </div>
+                `;
+            });
 
-    </div>
-`;
+            // Achievements Section
+            const achList = document.getElementById('achievements-list');
+            portfolioData.achievements.forEach(ach => {
+                achList.innerHTML += `
+                    <div class="glass-card p-4 rounded-xl transition hover:shadow-md border-l-4 ${ach.highlight ? 'border-indigo-500' : 'border-slate-200'}">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas ${ach.highlight ? 'fa-award text-indigo-600' : 'fa-certificate text-slate-400'} text-sm"></i>
+                            <h4 class="text-sm font-bold text-slate-900">${ach.title}</h4>
+                        </div>
+                        <p class="text-slate-500 text-xs leading-relaxed">${ach.description}</p>
+                    </div>
+                `;
+            });
 
+            // Education Section
+            const eduList = document.getElementById('education-list');
+            portfolioData.education.forEach(edu => {
+                eduList.innerHTML += `
+                    <div class="glass-card p-6 rounded-2xl shadow-sm">
+                        <h4 class="font-bold text-lg text-slate-900">${edu.degree}</h4>
+                        <p class="text-indigo-600 font-semibold mb-1">${edu.institution}</p>
+                        <div class="flex justify-between items-center text-sm text-slate-500">
+                            <span>${edu.duration}</span>
+                            <span class="bg-indigo-50 px-2 py-0.5 rounded font-bold text-indigo-700">CGPA: ${edu.cgpa}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Experience Section
+            const expList = document.getElementById('experience-list');
+            portfolioData.experience.forEach(exp => {
+                expList.innerHTML += `
+                    <div class="relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white shadow-sm"></div>
+                        <div class="flex flex-wrap justify-between items-start mb-4 gap-2">
+                            <h4 class="font-bold text-xl text-slate-900">${exp.role}</h4>
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full uppercase tracking-wider">${exp.duration}</span>
+                        </div>
+                        <p class="text-indigo-600 font-bold mb-4">${exp.company}</p>
+                        <ul class="space-y-3">
+                            ${exp.bullets.map(bullet => `
+                                <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+                                    <span class="mt-1.5 w-1.5 h-1.5 bg-indigo-400 rounded-full shrink-0"></span>
+                                    <span>${bullet}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            });
+
+            // Contact Section
+            const contactLinks = document.getElementById('contact-links');
+            const links = [
+                { id: 'email', icon: 'fas fa-envelope', label: 'Email', href: `mailto:${portfolioData.contact.email}` },
+                { id: 'phone', icon: 'fas fa-phone', label: 'Phone', href: `tel:${portfolioData.contact.phone.replace(/\s/g, '')}` },
+                { id: 'linkedin', icon: 'fab fa-linkedin', label: 'LinkedIn', href: portfolioData.contact.linkedin }
+            ];
+
+            links.forEach(link => {
+                contactLinks.innerHTML += `
+                    <a href="${link.href}" target="_blank" class="glass-card p-4 rounded-xl flex flex-col items-center gap-2 hover:bg-indigo-50 transition group">
+                        <i class="${link.icon} text-indigo-600 text-xl group-hover:scale-110 transition"></i>
+                        <span class="font-bold text-[11px] uppercase tracking-wider text-slate-600">${link.label}</span>
+                    </a>
+                `;
+            });
+
+            // Footer
+            document.getElementById('footer-text').innerHTML = `&copy; ${new Date().getFullYear()} ${portfolioData.name}.`;
         });
     </script>
-
 </body>
 
 </html>
