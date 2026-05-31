@@ -1,0 +1,174 @@
+{
+  "summary": "Undergraduate Computer Science student at Sri Venkateswara College of Engineering with a CGPA of 8.68 and hands-on experience building distributed systems, AI pipelines, and full-stack applications. Proficient in Java, Python, and JavaScript, with practical exposure to frameworks and tools such as LangChain, LangGraph, FastAPI, and cloud infrastructure through Internship and project work.",
+  "skills": {
+    "Languages": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C/C++",
+      "SQL",
+      "YAML"
+    ],
+    "Backend Development": [
+      "FastAPI",
+      "Spring Boot",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication",
+      "RBAC",
+      "ORMs"
+    ],
+    "Frontend Development": [
+      "React.js",
+      "React Native",
+      "Angular",
+      "HTML",
+      "CSS",
+      "Tailwind CSS"
+    ],
+    "AI & Data": [
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "Vector Embeddings",
+      "Semantic Search",
+      "PDF Parsing",
+      "SentenceTransformers",
+      "ChromaDB"
+    ],
+    "Databases": ["PostgreSQL", "MySQL", "MongoDB", "ChromaDB"],
+    "Tools & Platforms": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "Google Cloud Platform (GCP)",
+      "PyTest",
+      "Locust"
+    ]
+  },
+  "experience": [
+    {
+      "role": "AI & Software Development Trainee",
+      "company": "Genworx AI",
+      "duration": "Aug 2025 – Feb 2026",
+      "bullets": [
+        "Developed modular microservices using FastAPI and React, improving system scalability and reducing deployment cycles through strict adherence to SOLID principles.",
+        "Built LangGraph-based RAG workflows for retrieval, validation, and response generation, improving response consistency for internal knowledge-management tasks.",
+        "Optimized PostgreSQL query performance through execution-plan analysis and targeted indexing, reducing average API response latency from 250ms to 160ms under concurrent workloads.",
+        "Implemented automated unit and integration tests using PyTest, increasing code coverage to 85% and improving regression detection during feature releases."
+      ]
+    },
+    {
+      "role": "IoT & Software Development Intern",
+      "company": "Arka Automaations Limited",
+      "duration": "Jun 2024 – Jul 2024",
+      "bullets": [
+        "Built a real-time IoT monitoring system integrating 10+ ESP32 sensors with a React dashboard for telemetry visualization.",
+        "Designed an MQTT communication pipeline that reduced data transmission overhead compared to HTTP, ensuring sub-500ms end-to-end latency.",
+        "Engineered a WebSocket-based bridge to stream real-time event data to 50+ concurrent clients and automated reconnection."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "OmniKnow: Enterprise AI Knowledge Graph & Retrieval System ",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "PostgreSQL (pgvector)",
+        "Redis",
+        "Docker",
+        "GCP",
+        "React"
+      ],
+      "description": "Developed a Enterprise Knowledge Management system at Genworx AI that utilizes a hybrid search approach (Semantic + Keyword) to allow employees to query thousands of internal technical documents with high precision.",
+      "bullets": [
+        "Architected a Hybrid Search engine combining pgvector for semantic retrieval and BM25 for keyword matching, increasing document retrieval precision for technical jargon.",
+        "Implemented temporal-aware retrieval in the RAG pipeline by prioritizing document recency alongside semantic similarity, improving relevance for time-sensitive internal knowledge queries.",
+        "Implemented a multi-stage re-ranking pipeline using a Cross-Encoder model, which improved the Top-3 answer accuracy (Hit Rate).",
+        "Deployed the system using Docker and GCP (Google Cloud Platform), supporting 500+ concurrent internal users during the beta phase."
+      ]
+    },
+    {
+      "name": "LexiAI: Multi-Agent Legal Research Engine",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "FastAPI",
+        "ChromaDB",
+        "React",
+        "Semantic Search",
+        "RAG",
+        "Tailwind CSS"
+      ],
+      "description": "Architected a Multi-Agent RAG System using LangGraph, orchestrating a specialized Generator Agent (LLM) and a Discriminator Agent to validate responses, significantly reducing hallucination rates and enabling web-based precedent matching for enhanced legal research.",
+      "bullets": [
+        "Architected a Multi-Agent RAG System using LangGraph, orchestrating a Generator Agent and a Discriminator Agent to validate responses, reducing hallucination rates and enabling web-based precedent matching.",
+        "Implemented Semantic Search using vector embeddings (SentenceTransformers) over a corpus of 200+ legal documents, enabling context-aware retrieval beyond keyword matching.",
+        "Designed an asynchronous ingestion pipeline using asyncio to parse and embed PDF documents concurrently, optimizing throughput for large datasets.",
+        "Built a RESTful API layer with exponential retry logic handling multiple concurrent web requests."
+      ]
+    },
+    {
+      "name": "High-Concurrency Movie Booking System",
+      "tech_stack": [
+        "FastAPI",
+        "PostgreSQL",
+        "React.js",
+        "JWT",
+        "Pessimistic Locking",
+        "Tailwind CSS"
+      ],
+      "description": "Engineered a high-concurrency ticket booking platform solving the double-booking race condition via pessimistic locking, validated under 500+ concurrent transactions with zero data inconsistencies.",
+      "bullets": [
+        "Solved the 'Double Booking' race condition by implementing a Pessimistic Locking strategy using a dedicated reservation table, ensuring strict ACID compliance during concurrent seat requests.",
+        "Designed a normalized database schema (3NF) with strategic indexing on search columns, optimizing query performance for high-frequency seat availability checks.",
+        "Simulated high-load scenarios using Locust, validating the locking mechanism under 500+ concurrent transactions with zero data inconsistencies.",
+        "Implemented a secure authentication flow with JWT Access/Refresh tokens and role-based access control."
+      ]
+    },
+    {
+      "name": "TCP Chat Application",
+      "tech_stack": [
+        "Node.js",
+        "Express.js",
+        "TCP Sockets",
+        "PostgreSQL",
+        "HTML",
+        "CSS"
+      ],
+      "description": "Developed a low-latency 1-to-1 real-time chat system using raw TCP sockets, bypassing HTTP overhead for persistent bidirectional communication with PostgreSQL-backed message persistence.",
+      "bullets": [
+        "Reduced message delivery latency compared to standard HTTP polling by utilizing raw TCP sockets for persistent full-duplex communication.",
+        "Implemented persistent message storage in PostgreSQL with an indexed schema enabling efficient chat history retrieval by user and timestamp.",
+        "Engineered a connection manager that handles 200+ concurrent socket connections gracefully."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "LeetCode – 525+ DSA Problems Solved",
+      "description": "Solved 525+ DSA problems (275+ Medium, 28+ Hard) with a peak contest rating of 1,848.",
+      "highlight": true
+    },
+    {
+      "title": "GATE 2026 Qualified",
+      "description": "Scored 510 in GATE 2026, securing AIR 6956 out of 211,020 applicants (top 3.3%).",
+      "highlight": true
+    },
+    {
+      "title": "Event Organizer – Interrupt '25",
+      "description": "Organized a department-level paper presentation event and an Azure Data Engineering workshop at Interrupt '25.",
+      "highlight": false
+    },
+    {
+      "title": "Udemy – Full-Stack Web Development Bootcamp",
+      "description": "Completed a comprehensive full-stack web development bootcamp, gaining hands-on experience in building end-to-end web applications.",
+      "highlight": false
+    }
+  ]
+}

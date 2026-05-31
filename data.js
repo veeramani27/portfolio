@@ -56,7 +56,7 @@ let portfolioData = {
       "metrics": {
         "documents_indexed": "200+",
         "hallucination_reduction": "significant",
-        "api_endpoints": "8+"
+        "api_endpoints": "20+"
       },
       "image": "legal_assistant.png",
       "link": null
@@ -160,7 +160,7 @@ let portfolioData = {
   "achievements": [
     {
       "title": "LeetCode – 450+ DSA Problems Solved",
-      "description": "Solved 450+ problems (260+ Medium, 22+ Hard) with a contest rating of 1,668.",
+      "description": "Solved 525+ problems (275+ Medium, 28+ Hard) with a contest rating of 1,848.",
       "highlight": true
     },
     {
